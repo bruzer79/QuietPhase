@@ -46,11 +46,11 @@ When both are true, each membership read produces **Event 4662** on the DC that 
 
 ## Requirements
 
-- **PowerShell 7.2 or later** (required by `Out-ConsoleGridView`)
+- **PowerShell 7.2 or later** (required by **Microsoft.PowerShell.ConsoleGuiTools**.)
+-- **QuietPhase relies on `Out-ConsoleGridView`, which is a part of the **Microsoft.PowerShell.ConsoleHost** module, which is a dependency of **Microsoft.PowerShell.ConsoleGuiTools**.
 - **ActiveDirectory module** (RSAT)
 - **Elevated session** as a member of **Domain Admins** (**Enterprise Admins** for forest-root groups). Reading and writing SACLs requires *Manage auditing and security log* (SeSecurityPrivilege) on the DCs.
 - **WinRM** access to remote DCs when checking audit policy on more than the local machine
-- **Microsoft.PowerShell.ConsoleGuiTools**. QuietPhase installs it from the PowerShell Gallery (CurrentUser scope) if it is missing.
 
 ## Usage
 
